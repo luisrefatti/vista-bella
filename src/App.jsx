@@ -463,7 +463,7 @@ const App = () => {
 
       <footer className="bg-white border-t border-gray-100 py-10">
         <div className="container mx-auto px-6 text-center">
-          <img src="../src/assets/logovistabella.png" alt="Logo" className="h-12 w-auto mx-auto mb-4 opacity-80" />
+          <img src={logo} alt="Logo" className="h-12 w-auto mx-auto mb-4 opacity-80" />
           <p className="text-gray-500 text-sm">© {new Date().getFullYear()} Vista Bella Apartamentos Mobiliados. Todos os direitos reservados.</p>
         </div>
       </footer>
