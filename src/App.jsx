@@ -1,6 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MapPin, Wifi, Tv, Coffee, Wind, CheckCircle, Instagram, Facebook, Mail, MessageCircle, ArrowRight, Star, ChevronLeft, ChevronRight, ShieldCheck, Clock, Users, Navigation } from 'lucide-react';
 
+import apto01 from './assets/apto01.avif';
+import apto02 from './assets/apto02.avif';
+import apto03 from './assets/apto03.avif';
+import apto04 from './assets/apto04.avif';
+import apto05 from './assets/apto05.avif';
+import apto06 from './assets/apto06.avif';
+import apto07 from './assets/apto07.jpg';
+import apto08 from './assets/apto08.jpg';
+import apto09 from './assets/apto09.jpg';
+
+import termas09 from './assets/termas09.png';
+import termas01 from './assets/termas01.avif';
+import termas02 from './assets/termas02.avif';
+import termas03 from './assets/termas03.avif';
+import termas04 from './assets/termas04.avif';
+import termas05 from './assets/termas05.avif';
+import termas06 from './assets/termas06.avif';
+import termas07 from './assets/termas07.avif';
+import termas08 from './assets/termas08.avif';
+import termas10 from './assets/termas10.png';
+import logo from './assets/logovistabella.png';
+
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -20,28 +42,27 @@ const App = () => {
   const brandYellow = '#febe05';
 
   const aptImages = [
-    { src: "../src/assets/apto01.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "O Prédio", desc: "Estrutura do Vista Bella Apartamentos Mobiliados." },
-    { src: "../src/assets/apto02.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "O Prédio", desc: "Estrutura do Vista Bella Apartamentos Mobiliados." },
-    { src: "../src/assets/apto03.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Sacada", desc: "Vista completa para o lago." },
-    { src: "../src/assets/apto04.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Quarto", desc: "Equipado com cama de casal e cama de solteiro." },
-    { src: "../src/assets/apto05.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Sala de Estar", desc: "Espaço conjugado para lazer." },
-    { src: "../src/assets/apto06.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Sala de Estar", desc: "Espaço conjugado para lazar." },
-    { src: "../src/assets/apto07.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Cozinha", desc: "Cozinha completa no apartamento." },
-    { src: "../src/assets/apto08.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Churrasqueira", desc: "Visão panorâmica da churrasqueira." },
-    { src: "../src/assets/apto09.jpg?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Refeições", desc: "Mesa de almoço/jantar com Smart TV" }
+    { src: apto01, title: "O Prédio", desc: "Estrutura do Vista Bella Apartamentos Mobiliados." },
+    { src: apto02, title: "O Prédio", desc: "Estrutura do Vista Bella Apartamentos Mobiliados." },
+    { src: apto03, title: "Sacada", desc: "Vista completa para o lago." },
+    { src: apto04, title: "Quarto", desc: "Equipado com cama de casal e cama de solteiro." },
+    { src: apto05, title: "Sala de Estar", desc: "Espaço conjugado para lazer." },
+    { src: apto06, title: "Sala de Estar", desc: "Espaço conjugado para lazar." },
+    { src: apto07, title: "Cozinha", desc: "Cozinha completa no apartamento." },
+    { src: apto08, title: "Churrasqueira", desc: "Visão panorâmica da churrasqueira." },
+    { src: apto09, title: "Refeições", desc: "Mesa de almoço/jantar com Smart TV" }
   ];
 
   const termasImages = [
-    { src: "../src/assets/termas09.png?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
-    { src: "../src/assets/termas01.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Rampa Molhada", desc: "Piscina e rampa molhada para quem gosta de ousadia." },
-    { src: "../src/assets/termas02.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Piscina Panorâmica", desc: "Perfeita para aproveitar ao máximo as termas." },
-    { src: "../src/assets/termas03.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Piscina Bar", desc: "Sua experiência praiana nas termas." },
-    { src: "../src/assets/termas04.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
-    { src: "../src/assets/termas05.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
-    { src: "../src/assets/termas06.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
-    { src: "../src/assets/termas07.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
-    { src: "../src/assets/termas08.avif?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80", title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
-
+    { src: termas09, title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
+    { src: termas01, title: "Rampa Molhada", desc: "Piscina e rampa molhada para quem gosta de ousadia." },
+    { src: termas02, title: "Piscina Panorâmica", desc: "Perfeita para aproveitar ao máximo as termas." },
+    { src: termas03, title: "Piscina Bar", desc: "Sua experiência praiana nas termas." },
+    { src: termas04, title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
+    { src: termas05, title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
+    { src: termas06, title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
+    { src: termas07, title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
+    { src: termas08, title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
   ];
 
   const nextSlide = (current, setFunc, length) => setFunc(current === length - 1 ? 0 : current + 1);
@@ -74,7 +95,7 @@ const App = () => {
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
             <div className="h-10 w-auto bg-gray-100 rounded p-1 border border-gray-200">
-              <img src="../src/assets/logovistabella.png" alt="Logo Vista Bella" className="h-full object-contain" />
+              <img src={logo} alt="Logo Vista Bella" className="h-full object-contain" />
             </div>
             <div>
               <span className="block font-extrabold text-xl leading-none text-gray-800 tracking-tight">Vista Bella</span>
@@ -128,8 +149,8 @@ const App = () => {
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="../src/assets/termas10.png?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-            alt="Vista do Lago"
+            src={termas10}
+            alt="Piscina de Ondas"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/70 to-transparent"></div>
