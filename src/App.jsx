@@ -57,12 +57,12 @@ const App = () => {
     { src: termas09, title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
     { src: termas01, title: "Rampa Molhada", desc: "Piscina e rampa molhada para quem gosta de ousadia." },
     { src: termas02, title: "Piscina Panorâmica", desc: "Perfeita para aproveitar ao máximo as termas." },
-    { src: termas03, title: "Piscina Bar", desc: "Sua experiência praiana nas termas." },
-    { src: termas04, title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
-    { src: termas05, title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
-    { src: termas06, title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
-    { src: termas07, title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
-    { src: termas08, title: "Piscina de Ondas", desc: "Sua experiência praiana nas termas." },
+    { src: termas03, title: "Piscina Bar", desc: "Aproveite drinks e petiscos na piscina bar." },
+    { src: termas04, title: "Toboágua", desc: "Diversão para toda a família!" },
+    { src: termas05, title: "Piscina Bar", desc: "Aproveite drinks e petiscos na piscina bar." },
+    { src: termas06, title: "Toboágua e chuveirinhos", desc: "Diversão para toda a família!" },
+    { src: termas07, title: "Balneário Marcelino Ramos", desc: "Visão áerea noturna das Termas de Marcelino." },
+    { src: termas08, title: "Entrada Balneário", desc: "Termas de Marcelino Ramos." },
   ];
 
   const nextSlide = (current, setFunc, length) => setFunc(current === length - 1 ? 0 : current + 1);
