@@ -13,14 +13,14 @@ import apto09 from './assets/apto09.jpg';
 
 import termas09 from './assets/termas09.png';
 import termas01 from './assets/termas01.avif';
-import termas02 from './assets/termas02.avif';
+import termas02 from './assets/termas02.jpeg';
 import termas03 from './assets/termas03.avif';
 import termas04 from './assets/termas04.avif';
 import termas05 from './assets/termas05.avif';
 import termas06 from './assets/termas06.avif';
 import termas07 from './assets/termas07.avif';
 import termas08 from './assets/termas08.avif';
-import termas10 from './assets/termas10.png';
+import termas10 from './assets/termas10.jpeg';
 import logo from './assets/logovistabella.png';
 
 const App = () => {
