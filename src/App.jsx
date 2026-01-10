@@ -417,10 +417,10 @@ const App = () => {
               <p className="text-sm text-gray-500">contatovistabella@gmail.com</p>
             </div>
 
-            <a href="https://www.facebook.com/vistabellatermas" className="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center justify-center hover:bg-pink-50 hover:border-pink-100 transition-colors group">
+            <a href="https://www.instagram.com/vistabellatermas/" className="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center justify-center hover:bg-pink-50 hover:border-pink-100 transition-colors group">
               <Instagram size={24} className="text-gray-400 group-hover:text-pink-500 mb-3" />
               <h4 className="font-bold text-gray-700 group-hover:text-pink-600">Instagram</h4>
-              <p className="text-sm text-gray-500 group-hover:text-pink-400">@vistabella</p>
+              <p className="text-sm text-gray-500 group-hover:text-pink-400">@vistabellatermas</p>
             </a>
 
             <a href="https://www.facebook.com/vistabellatermas" className="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col items-center justify-center hover:bg-blue-50 hover:border-blue-100 transition-colors group">
