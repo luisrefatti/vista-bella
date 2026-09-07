@@ -11,7 +11,7 @@ import apto07 from './assets/apto07.jpg';
 import apto08 from './assets/apto08.jpg';
 import apto09 from './assets/apto09.jpg';
 
-import termas09 from './assets/termas09.png';
+import termas09 from './assets/termas09.jpg';
 import termas01 from './assets/termas01.avif';
 import termas02 from './assets/termas02.jpeg';
 import termas03 from './assets/termas03.avif';
@@ -38,16 +38,13 @@ const App = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const brandBlue = '#129ce2';
-  const brandYellow = '#febe05';
-
   const aptImages = [
     { src: apto01, title: "O Prédio", desc: "Estrutura do Vista Bella Apartamentos Mobiliados." },
     { src: apto02, title: "O Prédio", desc: "Estrutura do Vista Bella Apartamentos Mobiliados." },
     { src: apto03, title: "Sacada", desc: "Vista completa para o lago." },
     { src: apto04, title: "Quarto", desc: "Equipado com cama de casal e cama de solteiro." },
     { src: apto05, title: "Sala de Estar", desc: "Espaço conjugado para lazer." },
-    { src: apto06, title: "Sala de Estar", desc: "Espaço conjugado para lazar." },
+    { src: apto06, title: "Sala de Estar", desc: "Espaço conjugado para lazer." },
     { src: apto07, title: "Cozinha", desc: "Cozinha completa no apartamento." },
     { src: apto08, title: "Churrasqueira", desc: "Visão panorâmica da churrasqueira." },
     { src: apto09, title: "Refeições", desc: "Mesa de almoço/jantar com Smart TV" }
@@ -104,7 +101,7 @@ const App = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-8">
-            {['Acomodações', 'Destino', 'Localização'].map((item) => (
+            {['Acomodações', 'Destino', 'FAQ', 'Localização'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split(' ')[0]}`}
@@ -129,7 +126,7 @@ const App = () => {
 
         <div className={`md:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="flex flex-col p-6 gap-4">
-            {['Acomodações', 'Destino', 'Localização'].map((item) => (
+            {['Acomodações', 'Destino', 'FAQ', 'Localização'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split(' ')[0]}`}
@@ -168,8 +165,9 @@ const App = () => {
             </h1>
 
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              Apartamentos completos ao lado das Termas de Marcelino Ramos.
-              O equilíbrio perfeito entre a liberdade de um lar e o relaxamento que você merece.
+              Apartamentos completos e mobiliados ao lado das Termas de Marcelino Ramos —
+              a alternativa ideal a hotel e pousada para quem busca aluguel por temporada
+              com o equilíbrio perfeito entre a liberdade de um lar e o relaxamento que você merece.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -223,7 +221,11 @@ const App = () => {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Por que escolher o Vista Bella?</h2>
-            <p className="text-gray-600">O lugar mais aconchegante e ideal para você que procura sossego, conforto e comodidade.</p>
+            <p className="text-gray-600">
+              Mais do que um hotel ou pousada em Marcelino Ramos, somos apartamentos completos
+              para aluguel por temporada — o lugar mais aconchegante e ideal para você que procura
+              sossego, conforto e comodidade.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -386,6 +388,48 @@ const App = () => {
         </div>
       </section>
 
+      <section id="faq" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <div className="text-center mb-12">
+            <span className="text-[#129ce2] fonnpm t-bold uppercase tracking-widest text-sm">Dúvidas Frequentes</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Perguntas sobre hospedagem e reserva</h2>
+          </div>
+
+          <div className="space-y-4">
+            {[
+              {
+                q: "O Vista Bella é um hotel, pousada ou apartamento?",
+                a: "O Vista Bella é um prédio de apartamentos completos e mobiliados para aluguel por temporada em Marcelino Ramos. Funciona como alternativa a hotéis e pousadas, com a diferença de oferecer cozinha própria, mais privacidade e o conforto de uma casa."
+              },
+              {
+                q: "Qual a distância do Vista Bella até as Termas de Marcelino Ramos?",
+                a: "Ficamos a poucos metros da entrada das Termas de Marcelino Ramos, podendo ser acessado a pé."
+              },
+              {
+                q: "Quantas pessoas cabem em cada apartamento?",
+                a: "Cada apartamento comporta até 4 pessoas, com configuração flexível de cama de casal, cama de solteiro e sofá-cama."
+              },
+              {
+                q: "Como faço para reservar um apartamento no Vista Bella?",
+                a: "As reservas são feitas diretamente pelo WhatsApp (54) 99685-4779, sem intermediação de plataformas de terceiros, com atendimento humanizado."
+              },
+              {
+                q: "O Vista Bella funciona o ano todo?",
+                a: "Sim, recebemos hóspedes 365 dias por ano, tanto na temporada de inverno (termas) quanto na de verão (lago)."
+              }
+            ].map((item, idx) => (
+              <details key={idx} className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm group">
+                <summary className="font-bold text-gray-800 cursor-pointer list-none flex justify-between items-center gap-4">
+                  {item.q}
+                  <ChevronRight size={18} className="text-[#129ce2] flex-shrink-0 transition-transform group-open:rotate-90" />
+                </summary>
+                <p className="text-gray-500 mt-3 leading-relaxed">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="contato" className="py-20 bg-white">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Pronto para garantir sua data?</h2>
@@ -463,8 +507,20 @@ const App = () => {
 
       <footer className="bg-white border-t border-gray-100 py-10">
         <div className="container mx-auto px-6 text-center">
-          <img src={logo} alt="Logo" className="h-12 w-auto mx-auto mb-4 opacity-80" />
-          <p className="text-gray-500 text-sm">© {new Date().getFullYear()} Vista Bella Apartamentos Mobiliados. Todos os direitos reservados.</p>
+          <img src={logo} alt="Logo Vista Bella Apartamentos Mobiliados" className="h-12 w-auto mx-auto mb-4 opacity-80" />
+          <p className="font-bold text-gray-700">Vista Bella Apartamentos Mobiliados</p>
+          <p className="text-gray-500 text-sm mt-1">
+            Balneário de Marcelino Ramos, Rua da Palmeira - 77, Marcelino Ramos - RS, Brasil
+          </p>
+          <p className="text-gray-500 text-sm">
+            <a href="https://wa.me/5554996854779" className="hover:text-[#129ce2]">(54) 99685-4779</a>
+            {" · "}
+            <a href="mailto:contatovistabella@gmail.com" className="hover:text-[#129ce2]">contatovistabella@gmail.com</a>
+          </p>
+          <p className="text-gray-400 text-xs mt-4">
+            Apartamentos mobiliados para aluguel por temporada — alternativa a hotel e pousada em Marcelino Ramos, RS.
+          </p>
+          <p className="text-gray-500 text-sm mt-4">© {new Date().getFullYear()} Vista Bella Apartamentos Mobiliados. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>

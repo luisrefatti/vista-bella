@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Crawlers de assistentes de IA (respondem por llms.txt em /llms.txt)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://vistabella.tur.br/sitemap.xml
